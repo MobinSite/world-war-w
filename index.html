@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WORLD WAR | فرماندهی جهانی</title>
+<style>
+:root{--bg:#070d17;--panel:#111c2c;--panel2:#0b1422;--line:#2b405b;--text:#eaf2ff;--muted:#9bb0ca;--cyan:#00c9f2;--gold:#ffc447;--green:#23c78a;--red:#ff657a}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#15253a 0,#080e18 65%);color:var(--text);font-family:Tahoma,Arial,sans-serif;font-size:14px}button,input,select,textarea{font:inherit}button{cursor:pointer;border:1px solid #3a5878;border-radius:8px;padding:9px 13px;color:#eaf6ff;background:#1a2b42}button:hover{border-color:var(--cyan);background:#203b56}button.primary{background:#007da5;border-color:#22c9ed}button.good{background:#124735;border-color:#23845f}button.danger{background:#542330;border-color:#9b4053}button:disabled{opacity:.45;cursor:not-allowed}.hidden{display:none!important}.wrap{max-width:1200px;margin:auto;padding:18px}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:1px solid var(--line);padding:5px 0 16px;margin-bottom:18px}.brand{font-weight:900;font-size:24px;letter-spacing:2px}.brand small{display:block;font-size:11px;color:var(--cyan);letter-spacing:3px;margin-top:5px}.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.panel,.stat{background:linear-gradient(145deg,#142033,#0b1421);border:1px solid var(--line);border-radius:12px;padding:16px}.stat span{display:block;color:var(--muted);font-size:12px}.stat strong{display:block;color:var(--gold);font-size:22px;margin-top:7px}.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}.layout{display:grid;grid-template-columns:1.2fr 1fr;gap:12px}.panel h2{font-size:17px;margin:0 0 14px}.field{display:flex;flex-direction:column;gap:7px;margin:12px 0}.field label{color:#c6d7ed}.field input,.field select,.field textarea,input,select,textarea{background:#07111e;border:1px solid #334b68;border-radius:7px;color:var(--text);padding:10px;width:100%}#countrySelect{min-height:42px;display:block;line-height:1.5;color:#eaf2ff}#countrySelect option{background:#0b1422;color:#eaf2ff;padding:8px}#countrySelect:invalid{color:#eaf2ff} .field textarea{min-height:85px}.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.row>*{flex:1}.notice{padding:11px;border-radius:8px;background:#17273a;color:#c9d8e9;margin:12px 0;border:1px solid #2c4561}.notice.warn{background:#302818;border-color:#715d2b;color:#ffe39a}.notice.good{background:#102d25;border-color:#236c52}.list{display:flex;flex-direction:column;gap:8px}.player{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px;border:1px solid var(--line);border-radius:9px;background:#0b1422}.player small{display:block;color:var(--muted);margin-top:4px}.tag{font-size:11px;padding:4px 7px;border-radius:20px;background:#20334b;color:#bfeeff}.footer{text-align:center;color:#7890ac;font-size:11px;padding:24px 0}.globe-wrap{display:flex;flex-direction:column;align-items:center;gap:10px}.bigglobe{position:relative;isolation:isolate;overflow:hidden;transform:none!important;animation:none!important;transform-style:preserve-3d;width:min(390px,82vw);aspect-ratio:1;border-radius:50%;margin:18px auto;background:radial-gradient(ellipse at 29% 24%,#68d5f5 0,#218dbb 15%,#12618c 38%,#07395f 66%,#031326 83%);box-shadow:inset -34px -20px 48px #010711,inset 12px 8px 26px #6be4ff55,0 0 30px #008bb544;border:2px solid #1d749c;text-align:center}.bigglobe:before{content:"";position:absolute;inset:-2%;border-radius:50%;z-index:0;background:repeating-linear-gradient(0deg,transparent 0 34px,#83dcff2b 35px 36px),repeating-linear-gradient(90deg,transparent 0 44px,#83dcff25 45px 46px);clip-path:ellipse(49% 50% at 50% 50%);pointer-events:none}.bigglobe:after{content:"";position:absolute;inset:0;border-radius:50%;z-index:4;background:linear-gradient(110deg,transparent 35%,#01091622 61%,#010712bd 100%);pointer-events:none}.globe-land{position:absolute;z-index:1;opacity:.65;background:linear-gradient(135deg,#8bc77b,#2e895e 65%,#145341);filter:drop-shadow(0 2px 2px #001);pointer-events:none}.land-one{left:18%;top:22%;width:31%;height:22%;border-radius:65% 35% 52% 35%;transform:rotate(-18deg);clip-path:polygon(8% 20%,40% 0,68% 14%,100% 45%,72% 65%,64% 100%,38% 72%,20% 58%,0 40%)}.land-two{left:34%;top:43%;width:17%;height:34%;border-radius:40%;transform:rotate(15deg);clip-path:polygon(18% 0,80% 8%,100% 38%,66% 61%,55% 100%,25% 79%,0 35%)}.land-three{right:15%;top:24%;width:29%;height:25%;border-radius:45%;transform:rotate(8deg);clip-path:polygon(0 28%,27% 0,72% 8%,100% 32%,80% 59%,58% 100%,38% 68%,12% 65%)}.land-four{right:18%;bottom:17%;width:25%;height:17%;border-radius:48%;transform:rotate(-12deg);clip-path:polygon(5% 30%,35% 0,70% 15%,100% 48%,70% 86%,28% 100%,0 58%)}.globe-center{position:absolute;z-index:3;left:50%;top:50%;transform:translate(-50%,-50%);padding:7px 10px;border-radius:9px;background:#041526bb;border:1px solid #73dfff66;box-shadow:0 3px 12px #0007;white-space:nowrap}.globe-center strong{font-size:15px}.globe-labels{position:absolute;inset:0;z-index:2}.globe-country-tag{position:absolute;transform:translate(-50%,-50%);max-width:88px;padding:2px 4px;border:1px solid #bcefff7a;border-radius:5px;background:#061727c9;color:#fff;font-size:9px;line-height:1.3;white-space:nowrap;text-shadow:0 1px 2px #000;overflow:hidden;text-overflow:ellipsis}.globe-country-tag .flag{font-size:11px}.globe-legend{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;max-width:600px}.globe-legend .tag{font-size:11px}.chat-note{margin-top:10px;font-size:12px;color:var(--muted)}.chat-message{display:flex;flex-direction:column;gap:5px;max-width:85%;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:#0a1727;overflow-wrap:anywhere}.chat-message.mine{align-self:flex-start;border-color:#087da1;background:#092437}.chat-message.other{align-self:flex-end}.chat-message small{color:var(--muted);font-size:10px}.chat-log{display:flex;flex-direction:column;gap:8px;min-height:120px;max-height:420px;overflow:auto;padding:10px;background:#07111e;border:1px solid var(--line);border-radius:10px}.globe-labels:empty:after{content:"با ثبت کشورها، پرچم و نام آن‌ها اینجا ظاهر می‌شود";position:absolute;left:50%;top:75%;transform:translateX(-50%);font-size:9px;color:#e5f8ff;white-space:nowrap}\n.small{font-size:12px}.admin-lock{max-width:420px;margin:35px auto}.shopcard{background:#0a1422;border:1px solid #2b405b;border-radius:10px;padding:12px;display:flex;flex-direction:column;gap:8px}.shopcard h3{font-size:14px;margin:0}.shopcard .price{color:var(--gold);font-weight:bold}.shopcard p{font-size:12px;color:var(--muted);margin:0;min-height:32px}.shopcard button{margin-top:auto}.itemchip{display:inline-block;border:1px solid #304862;border-radius:7px;padding:6px 9px;margin:3px;color:#cce3ff}
+@media(max-width:760px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.layout{grid-template-columns:1fr}.brand{font-size:19px}.wrap{padding:10px}.stat strong{font-size:18px}}
+</style></head>
+<body><div class="wrap">
+<header class="top"><div class="brand">WORLD WAR <small>GLOBAL COMMAND SYSTEM</small></div><div class="row" style="max-width:340px"><span id="profileBadge" class="tag">بدون فرمانده</span><button id="deleteAccountBtn" class="danger hidden">حذف حساب (پس از فتح)</button></div></header>
+<section id="registerView" class="panel" style="max-width:560px;margin:30px auto">
+<h1 style="margin-top:0">ورود به WORLD WAR</h1><p class="muted">نام فرمانده و کشور خودت را انتخاب کن. تا زمانی که کشورت فتح نشده، امکان تغییر کشور نداری.</p><div id="onlineStatus" class="notice">در حال اتصال به سرور آنلاین...</div>
+<div class="field"><label for="playerName">نام فرمانده</label><input id="playerName" maxlength="30" placeholder="نام بازیکن"></div>
+<div class="field"><label for="countrySelect">کشور</label><select id="countrySelect" required></select></div>
+<div class="field"><label for="flagSelect">پرچم</label><select id="flagSelect"><option>🏳️</option><option>🇮🇷</option><option>🇺🇸</option><option>🇫🇷</option><option>🇩🇪</option><option>🇯🇵</option><option>🇧🇷</option><option>🇹🇷</option><option>🇬🇧</option><option>🇨🇳</option><option>🇷🇺</option></select></div>
+<button id="registerBtn" class="primary" style="width:100%">ورود به بازی</button><div id="registerError" class="notice warn hidden"></div>
+</section>
+<section id="gameView" class="hidden">
+<div class="grid">
+<div class="stat"><span>کشور</span><strong id="sCountry">—</strong></div>
+<div class="stat"><span>بودجه</span><strong id="sMoney">$0</strong></div>
+<div class="stat"><span>نیروی کشور</span><strong id="sForce">0</strong></div>
+<div class="stat"><span>سطح تعمیرات</span><strong id="sRepair">0%</strong></div>
+</div>
+<nav class="tabs"><button data-tab="world" class="primary">🌍 نقشه جهان</button><button data-tab="economy">💰 اقتصاد</button><button data-tab="arsenal">🛡️ زرادخانه</button><button data-tab="diplomacy">🤝 دیپلماسی</button><button data-tab="chat">💬 CHAT</button><button data-tab="admin">🔐 پنل مدیریت</button></nav>
+<section id="tab-world" class="layout">
+<div class="panel"><h2>نقشه جهان</h2><div class="globe-wrap"><div class="bigglobe"><div class="globe-land land-one"></div><div class="globe-land land-two"></div><div class="globe-land land-three"></div><div class="globe-land land-four"></div><div id="globeLabels" class="globe-labels"></div><div class="globe-center"><strong id="globeCountry">—</strong><div class="muted small">فرماندهی جهانی</div></div></div><div id="globeLegend" class="globe-legend"></div></div></div>
+<div class="panel"><h2>اطلاعات کشور</h2><p>فرمانده: <b id="pName">—</b></p><p>کشور: <b id="pCountry">—</b></p><p>وضعیت: <b id="pStatus">مستقل</b></p><h3>تجهیزات</h3><div id="inventoryView"></div><div class="notice">وضعیت آنلاین: کشورها و چت از سرور بارگذاری می‌شوند.</div></div>
+</section>
+<section id="tab-economy" class="layout hidden"><div class="panel"><h2>بودجه و اقتصاد کشور</h2><p>بودجه فعلی: <b id="econMoney" style="color:var(--gold)">$0</b></p><p class="muted">درآمد خودکار حذف شده است؛ بودجه فقط با پاداش مدیریت یا رویدادهای واقعی بازی تغییر می‌کند.</p></div><div class="panel"><h2>نیروهای کمکی</h2><p>هر واحد تعمیر، ۱۰٪ به سطح تعمیرات اضافه می‌کند؛ حداکثر ۸۰٪.</p><button id="repairBtn" class="good">استفاده از واحد تعمیرات (۱ میلیارد دلار)</button><p id="repairMessage" class="muted"></p></div></section>
+<section id="tab-arsenal" class="panel hidden"><h2>زرادخانهٔ ملی</h2><p class="muted">دسته‌بندی‌های جداگانه، قیمت مشخص و خرید با بودجهٔ کشور.</p><div id="arsenalView"></div><div class="tabs"><button data-arsenal="موشک" class="primary">🚀 موشک‌ها</button><button data-arsenal="پدافند هوایی">🛡️ پدافند</button><button data-arsenal="پهپاد">🛸 پهپادها</button><button data-arsenal="جنگنده">✈️ جنگنده‌ها</button><button data-arsenal="واحد تعمیرات">🔧 تعمیرات</button></div><div id="shopItems" class="grid"></div></section>
+<section id="tab-diplomacy" class="panel hidden"><h2>دیپلماسی</h2><p class="muted">درخواست‌های دیپلماتیک</p><div class="field"><label>کشور مقصد</label><select id="diplomacyTarget"></select></div><div class="row"><button id="negotiateBtn">درخواست مذاکره</button><button id="attackBtn" class="danger">شبیه‌سازی حمله</button></div><p id="diplomacyMessage" class="notice hidden"></p></section>
+<section id="tab-chat" class="panel hidden"><h2>چت عمومی WORLD WAR</h2><p class="muted">چت عمومی آنلاین؛ پیام‌ها برای همهٔ بازیکنان واردشده نمایش داده می‌شوند.</p><div id="chatLog" class="chat-log" style="margin-bottom:12px"></div><div class="row"><input id="chatInput" maxlength="500" placeholder="پیامت را بنویس…"><button id="sendChatBtn" class="primary">ارسال پیام</button></div><p class="chat-note" id="chatStatus">اتصال چت آنلاین در حال آماده‌سازی است.</p></section>
+<section id="tab-admin" class="hidden">
+<div id="adminLock" class="panel admin-lock"><h2>ورود مدیر</h2><p class="muted">رمز مدیریت را وارد کن.</p><div class="field"><label>رمز مدیر</label><input id="adminPassword" type="password" placeholder="رمز مدیریت"></div><button id="adminLoginBtn" class="primary" style="width:100%">ورود به پنل مدیریت</button><p id="adminError" class="notice warn hidden"></p></div>
+<div id="adminPanel" class="hidden">
+<div class="panel"><h2>پنل مدیریت</h2><p class="muted">فهرست بازیکنان از سرور خوانده می‌شود. اعطای منابع به دیگر بازیکنان برای امنیت باید از مسیر مدیریتی سروری انجام شود؛ رمز داخل HTML به‌تنهایی امنیت سروری نیست.</p><button id="adminLogoutBtn">قفل‌کردن پنل</button></div>
+<div class="layout" style="margin-top:12px"><div class="panel"><h2>بازیکنان</h2><div id="adminPlayers" class="list"></div></div><div class="panel"><h2 id="grantTitle">اعطای امکانات</h2><p id="selectedPlayerInfo" class="muted">اول یک بازیکن را از فهرست انتخاب کن.</p>
+<div class="field"><label>مقدار بودجه (میلیارد دلار)</label><input id="grantMoney" type="number" min="0" max="1000000000" value="0"></div>
+<div class="field"><label>نوع وسیله / امتیاز</label><select id="grantItem"><option>موشک</option><option>پدافند هوایی</option><option>پهپاد</option><option>جنگنده</option><option>واحد تعمیرات</option><option>نیروی کشور</option><option>سطح تعمیرات</option></select></div>
+<div class="field"><label>تعداد / مقدار</label><input id="grantAmount" type="number" min="0" max="1000000000" value="0"></div>
+<button id="grantBtn" class="good" style="width:100%">اعطای موارد انتخاب‌شده</button><p id="grantMessage" class="notice hidden"></p>
+<div class="field"><label>مدیریت وضعیت کشور</label><button id="unlockCountryBtn">بازکردن قفل تغییر کشور برای بازیکن</button><button id="markConqueredBtn" class="danger">ثبت فتح کشور بازیکن</button></div></div></div>
+</div></section>
+</section><div class="footer">WORLD WAR • اتصال آنلاین از طریق Supabase</div></div>
+<script type="module">
+import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
+(()=>{'use strict';
+const SUPABASE_URL='https://gqmpccxcpjmwcmkditng.supabase.co';
+const SUPABASE_KEY='sb_publishable_FrB3sSUjV_bLix80puEreg_QYRBmtyr';
+const supabase=createClient(SUPABASE_URL,SUPABASE_KEY);
+let authUser=null, onlineReady=false, onlineCountries=[], onlineChats=[], realtimeChannel=null;
+const $=id=>document.getElementById(id), STORE='ww_game_v4';
+// شروع پاک: داده‌های نسخهٔ قبلی بازی و شناسهٔ ورود قبلی فقط یک‌بار حذف می‌شوند.
+if(!localStorage.getItem('ww_game_v4_initialized')){localStorage.removeItem('ww_game_v3');localStorage.removeItem('ww_current_player');localStorage.setItem('ww_game_v4_initialized','1');}
+const ADMIN_PASSWORD='123'; // این رمز را در کد تغییر بده؛ پنل سمت مرورگر، امنیت سروری ندارد.
+const COUNTRIES=['ایران','فرانسه','آلمان','ژاپن','برزیل','ترکیه','بریتانیا','چین','روسیه','آمریکا','مصر','ایتالیا','کانادا','هند','استرالیا','افغانستان','پاکستان','عراق','عربستان سعودی','امارات متحده عربی','قطر','کویت','عمان','یمن','اردن','لبنان','سوریه','آذربایجان','ارمنستان','گرجستان','قزاقستان','ازبکستان','ترکمنستان','تاجیکستان','قرقیزستان','کره جنوبی','کره شمالی','اندونزی','مالزی','سنگاپور','تایلند','ویتنام','فیلیپین','بنگلادش','سری‌لانکا','نپال','مغولستان','نیوزیلند','مکزیک','آرژانتین','شیلی','کلمبیا','پرو','ونزوئلا','کوبا','پرتغال','اسپانیا','هلند','بلژیک','سوئیس','اتریش','سوئد','نروژ','فنلاند','دانمارک','لهستان','اوکراین','یونان','رومانی','بلغارستان','صربستان','کرواسی','مجارستان','چک','اسلواکی','ایرلند','ایسلند','مراکش','الجزایر','تونس','لیبی','اتیوپی','کنیا','نیجریه','غنا','سنگال','آفریقای جنوبی'];
+let db=loadDB(), me=null, adminOpen=false, selectedAdmin=null, currentTab='world', shopCategory='موشک';
+const SHOP={
+'موشک':[
+['موشک نگهبان',2,'موشک پایه'],['موشک تندباد',5,'سرعت بالا'],['موشک آذرخش',9,'قدرت پیشرفته'],['موشک شب‌تاب',14,'سامانه هدایت پیشرفته'],['موشک کوه‌شکن',22,'مدل سنگین'],['موشک نیزه‌دار',25,'برد بلند'],['موشک صاعقه‌رو',28,'مدل پرسرعت'],['موشک سپیده‌دم',31,'نسخه ارتقایافته'],['موشک گرگ آهنین',34,'مدل سنگین پیشرفته'],['موشک آذرخش سیاه',38,'سامانه پیشرفته'],['موشک موج‌شکن',41,'مدل راهبردی'],['موشک عقاب سرخ',45,'مدل ویژه'],['موشک طوفان شمالی',49,'مدل فوق‌پیشرفته'],['موشک شاهین فولادی',53,'مدل سنگین ویژه'],['بمب تزار سرخ چرخنده',60,'قوی‌ترین موشک زرادخانه']
+],
+'پدافند هوایی':[
+['پدافند سپرک',3,'پدافند پایه'],['پدافند صاعقه',7,'پوشش دفاعی بهتر'],['پدافند دیوار فولادی',13,'دفاع سطح بالا'],['پدافند آذرخش‌گیر',21,'سامانه پیشرفته'],['پدافند سپهر',24,'پوشش گسترده'],['پدافند موج آبی',27,'سامانه چندلایه'],['پدافند عقاب',30,'دفاع سریع'],['پدافند کوهستان',33,'دفاع مستحکم'],['پدافند شب‌نگهبان',36,'سامانه پیشرفته'],['پدافند سپر آهنین',39,'دفاع ویژه'],['پدافند افق',42,'پوشش دوربرد'],['پدافند آبیِ سایه',46,'سامانه سنگین'],['پدافند نگین آسمان',49,'مدل ممتاز'],['تار و مار آبی',55,'قوی‌ترین پدافند زرادخانه']
+],
+'پهپاد':[
+['پهپاد دیدبان',2,'شناسایی'],['پهپاد بادپا',5,'مدل سریع'],['پهپاد سایه',10,'نسخه پیشرفته'],['پهپاد شاهین شب',18,'مدل سنگین'],['پهپاد افق',20,'مدل دوربرد'],['پهپاد تیزپر',23,'سرعت بالا'],['پهپاد چشم عقاب',26,'سامانه پیشرفته'],['پهپاد موج‌سوار',29,'مدل چندمنظوره'],['پهپاد شب‌رو',32,'مدل ویژه'],['پهپاد سپهر',35,'مدل پیشرفته'],['پهپاد آذرخش',38,'نسخه سنگین'],['پهپاد شبح آبی',42,'مدل ممتاز'],['پهپاد سرخ دستی',50,'قوی‌ترین پهپاد زرادخانه']
+],
+'جنگنده':[
+['جنگنده صاعقه',8,'جنگنده پایه'],['جنگنده شاهین',15,'سرعت و قدرت بیشتر'],['جنگنده شهاب',24,'مدل پیشرفته'],['جنگنده سیمرغ',36,'جنگنده ویژه'],['جنگنده آذرخش',39,'مدل برتری هوایی'],['جنگنده عقاب سیاه',42,'نسخه ارتقایافته'],['جنگنده تندر',45,'مدل سنگین'],['جنگنده افق',48,'سامانه پیشرفته'],['جنگنده رعد',52,'مدل ویژه'],['جنگنده نگهبان',56,'جنگنده ممتاز'],['جنگنده شاهین سرخ',60,'مدل فوق‌پیشرفته']
+],
+'واحد تعمیرات':[
+['تیم تعمیر سبک',1,'افزایش ۱۰٪ سطح تعمیرات'],['تیم مهندسی',3,'بسته تعمیراتی ویژه'],['گروه بازسازی',6,'بسته چندواحدی تعمیرات'],['گروه فنی سیار',8,'تیم تعمیرات میدانی'],['مهندسان سپهر',10,'گروه مهندسی پیشرفته'],['لشکر بازسازی',13,'تیم بازسازی گسترده'],['گروه تعمیر فولادی',16,'گروه تعمیرات سنگین'],['ستاد مهندسی',20,'تیم تخصصی'],['گروه بازسازی ملی',25,'بسته ویژه بازسازی']
+]};
+function loadDB(){try{return JSON.parse(localStorage.getItem(STORE))||{players:{},owners:{},chats:[]}}catch{return{players:{},owners:{},chats:[]}}}
+function save(){
+  try{localStorage.setItem(STORE,JSON.stringify(db))}catch{}
+  if(onlineReady&&authUser&&me&&me.id===authUser.id) void syncMyCountry();
+}
+function setOnlineStatus(text,good=false){const el=$('onlineStatus');if(el){el.textContent=text;el.classList.toggle('good',good);el.classList.toggle('warn',!good)}}
+function rowToPlayer(row){return {id:row.user_id,name:row.username,country:row.country_name,flag:row.flag||flagFor(row.country_name,null),money:Number(row.budget??50),force:Number(row.force??120000),repair:Number(row.repair??0),inventory:row.inventory&&typeof row.inventory==='object'?row.inventory:{},conquered:!!row.conquered,countryLocked:!row.conquered}}
+async function refreshOnlineCountries(){
+  const {data,error}=await supabase.from('ww_countries').select('country_name,user_id,username,flag,budget,force,repair,inventory,conquered,created_at').order('created_at',{ascending:true});
+  if(error) throw error;
+  onlineCountries=data||[];db.players={};db.owners={};
+  for(const row of onlineCountries){const p=rowToPlayer(row);db.players[p.id]=p;db.owners[p.country]=p.id}
+  if(authUser&&db.players[authUser.id])me=db.players[authUser.id];
+  fillCountries();renderGlobe();if(me){render();if(currentTab==='admin'&&adminOpen)renderAdmin()}
+}
+async function syncMyCountry(){
+  if(!onlineReady||!authUser||!me||me.id!==authUser.id)return;
+  const patch={username:me.name,flag:me.flag||'🏳️',budget:Number(me.money)||0,force:Number(me.force)||0,repair:Number(me.repair)||0,inventory:me.inventory||{},conquered:!!me.conquered,updated_at:new Date().toISOString()};
+  const {error}=await supabase.from('ww_countries').update(patch).eq('user_id',authUser.id);
+  if(error){console.error('WORLD WAR sync error:',error.message);setOnlineStatus('خطا در ذخیرهٔ اطلاعات کشور: '+error.message,false)}
+}
+async function loadPublicChat(){
+  const {data,error}=await supabase.from('ww_public_messages').select('id,sender_id,sender_name,sender_country,body,created_at').order('created_at',{ascending:false}).limit(100);
+  if(error)throw error;onlineChats=(data||[]).reverse();renderChat();
+}
+function subscribeOnline(){
+  if(realtimeChannel)supabase.removeChannel(realtimeChannel);
+  realtimeChannel=supabase.channel('world-war-live')
+    .on('postgres_changes',{event:'*',schema:'public',table:'ww_countries'},async()=>{try{await refreshOnlineCountries()}catch(e){console.error(e)}})
+    .on('postgres_changes',{event:'INSERT',schema:'public',table:'ww_public_messages'},payload=>{if(!onlineChats.some(m=>m.id===payload.new.id)){onlineChats.push(payload.new);onlineChats=onlineChats.slice(-100);renderChat()}})
+    .subscribe(status=>{if(status==='SUBSCRIBED'){$('chatStatus').textContent='چت آنلاین متصل است؛ پیام‌ها زنده دریافت می‌شوند.';setOnlineStatus('اتصال آنلاین برقرار است.',true)}});
+}
+async function initOnline(){
+  try{
+    setOnlineStatus('در حال ورود امن به سرور...',false);
+    let {data:{session},error:sessionError}=await supabase.auth.getSession();if(sessionError)throw sessionError;
+    if(!session){const result=await supabase.auth.signInAnonymously();if(result.error)throw result.error;session=result.data.session}
+    authUser=session.user;if(!authUser)throw new Error('ورود ناشناس انجام نشد.');
+    await refreshOnlineCountries();await loadPublicChat();onlineReady=true;subscribeOnline();
+    const own=onlineCountries.find(row=>row.user_id===authUser.id);
+    if(own){me=rowToPlayer(own);db.players[me.id]=me;db.owners[me.country]=me.id;show('game');render();switchTab('world')}
+    else show('register');
+    setOnlineStatus('به سرور آنلاین متصل شدی.',true);
+  }catch(e){console.error('WORLD WAR online init:',e);onlineReady=false;setOnlineStatus('اتصال ناموفق: ابتدا فایل SQL همراه بازی را در Supabase اجرا کن. جزئیات: '+(e.message||e),false);fillCountries();show('register');$('chatStatus').textContent='چت تا زمان ساخت جدول‌های سرور در دسترس نیست.'}
+}
+function key(s){return s.trim().toLocaleLowerCase('fa')}
+const FLAG_BY_COUNTRY={'ایران':'🇮🇷','فرانسه':'🇫🇷','آلمان':'🇩🇪','ژاپن':'🇯🇵','برزیل':'🇧🇷','ترکیه':'🇹🇷','بریتانیا':'🇬🇧','چین':'🇨🇳','روسیه':'🇷🇺','آمریکا':'🇺🇸','مصر':'🇪🇬','ایتالیا':'🇮🇹','کانادا':'🇨🇦','هند':'🇮🇳','استرالیا':'🇦🇺','افغانستان':'🇦🇫','پاکستان':'🇵🇰','عراق':'🇮🇶','عربستان سعودی':'🇸🇦','امارات متحده عربی':'🇦🇪','قطر':'🇶🇦','کویت':'🇰🇼','عمان':'🇴🇲','یمن':'🇾🇪','اردن':'🇯🇴','لبنان':'🇱🇧','سوریه':'🇸🇾','آذربایجان':'🇦🇿','ارمنستان':'🇦🇲','گرجستان':'🇬🇪','قزاقستان':'🇰🇿','ازبکستان':'🇺🇿','ترکمنستان':'🇹🇲','تاجیکستان':'🇹🇯','قرقیزستان':'🇰🇬','کره جنوبی':'🇰🇷','کره شمالی':'🇰🇵','اندونزی':'🇮🇩','مالزی':'🇲🇾','سنگاپور':'🇸🇬','تایلند':'🇹🇭','ویتنام':'🇻🇳','فیلیپین':'🇵🇭','بنگلادش':'🇧🇩','سری‌لانکا':'🇱🇰','نپال':'🇳🇵','مغولستان':'🇲🇳','نیوزیلند':'🇳🇿','مکزیک':'🇲🇽','آرژانتین':'🇦🇷','شیلی':'🇨🇱','کلمبیا':'🇨🇴','پرو':'🇵🇪','ونزوئلا':'🇻🇪','کوبا':'🇨🇺','پرتغال':'🇵🇹','اسپانیا':'🇪🇸','هلند':'🇳🇱','بلژیک':'🇧🇪','سوئیس':'🇨🇭','اتریش':'🇦🇹','سوئد':'🇸🇪','نروژ':'🇳🇴','فنلاند':'🇫🇮','دانمارک':'🇩🇰','لهستان':'🇵🇱','اوکراین':'🇺🇦','یونان':'🇬🇷','رومانی':'🇷🇴','بلغارستان':'🇧🇬','صربستان':'🇷🇸','کرواسی':'🇭🇷','مجارستان':'🇭🇺','چک':'🇨🇿','اسلواکی':'🇸🇰','ایرلند':'🇮🇪','ایسلند':'🇮🇸','مراکش':'🇲🇦','الجزایر':'🇩🇿','تونس':'🇹🇳','لیبی':'🇱🇾','اتیوپی':'🇪🇹','کنیا':'🇰🇪','نیجریه':'🇳🇬','غنا':'🇬🇭','سنگال':'🇸🇳','آفریقای جنوبی':'🇿🇦'};
+function flagFor(country, player){return (player&&player.flag&&player.flag!=='🏳️')?player.flag:(FLAG_BY_COUNTRY[country]||'🏳️')}
+function fmt(n){return '$'+Number(n||0).toLocaleString('en-US')+'B'}
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function show(view){$('registerView').classList.toggle('hidden',view!=='register');$('gameView').classList.toggle('hidden',view!=='game');$('profileBadge').textContent=me?me.name+' • '+me.country:'بدون فرمانده';$('deleteAccountBtn').classList.toggle('hidden',!(view==='game'&&me&&me.conquered))}
+function fillCountries(){
+  const sel=$('countrySelect');sel.innerHTML='';
+  const placeholder=document.createElement('option');placeholder.value='';placeholder.textContent='— کشور را انتخاب کن —';placeholder.selected=true;sel.appendChild(placeholder);
+  const ownerMap={};
+  if(onlineReady){for(const row of onlineCountries)ownerMap[row.country_name]=row.user_id}
+  else Object.assign(ownerMap,db.owners||{});
+  COUNTRIES.forEach(c=>{const owner=ownerMap[c],o=document.createElement('option');o.value=c;o.textContent=(owner?'پر شد — ':'کشور خالیه — ')+c;o.disabled=!!owner;sel.appendChild(o)});
+  sel.value='';
+}
+async function register(){
+  const name=$('playerName').value.trim(),country=$('countrySelect').value,flag=$('flagSelect').value;
+  if(!name||!country){$('registerError').textContent='نام و کشور را انتخاب کن.';$('registerError').classList.remove('hidden');return}
+  if(!onlineReady||!authUser){$('registerError').textContent='اتصال سرور آماده نیست. خطای اتصال بالا را بررسی کن.';$('registerError').classList.remove('hidden');return}
+  const existing=onlineCountries.find(row=>row.user_id===authUser.id);
+  if(existing){me=rowToPlayer(existing);}
+  else{
+    if(onlineCountries.some(row=>row.country_name===country)){$('registerError').textContent='این کشور همین الان توسط بازیکن دیگری انتخاب شد. کشور دیگری انتخاب کن.';$('registerError').classList.remove('hidden');await refreshOnlineCountries();return}
+    const payload={country_name:country,user_id:authUser.id,username:name,flag,budget:50,force:120000,repair:0,inventory:{},conquered:false};
+    const {data,error}=await supabase.from('ww_countries').insert(payload).select('country_name,user_id,username,flag,budget,force,repair,inventory,conquered,created_at').single();
+    if(error){$('registerError').textContent=error.code==='23505'?'این کشور همین الان گرفته شد؛ کشور دیگری انتخاب کن.':'ثبت‌نام آنلاین ناموفق بود: '+error.message;$('registerError').classList.remove('hidden');await refreshOnlineCountries().catch(()=>{});return}
+    onlineCountries.push(data);me=rowToPlayer(data);
+  }
+  db.players[me.id]=me;db.owners[me.country]=me.id;save();$('registerError').classList.add('hidden');show('game');render();switchTab('world');await loadPublicChat().catch(console.error);await refreshOnlineCountries().catch(console.error);
+}
+function renderShop(){let list=SHOP[shopCategory]||[];$('shopItems').innerHTML=list.map(([name,price,desc])=>`<div class="shopcard"><h3>${esc(name)}</h3><span class="price">${fmt(price)} / هر عدد</span><p>${esc(desc)}</p><button data-buy="${esc(name)}" data-price="${price}" class="primary">خرید ۱ عدد</button></div>`).join('');document.querySelectorAll('[data-buy]').forEach(b=>b.onclick=()=>{let name=b.dataset.buy,price=Number(b.dataset.price);if(me.money<price){alert('بودجه کافی نیست. هزینه: '+fmt(price));return}if(shopCategory==='واحد تعمیرات'){if(me.repair>=80){alert('سطح تعمیرات به سقف ۸۰٪ رسیده است.');return}me.repair=Math.min(80,me.repair+10)}else me.inventory[name]=(me.inventory[name]||0)+1;me.money-=price;db.players[me.id]=me;save();render();renderShop()})}
+function renderGlobe(){
+ const registered=Object.keys(db.owners||{}).map(country=>{const id=db.owners[country],p=db.players&&db.players[id];return p?{country,player:p,flag:flagFor(country,p)}:null}).filter(Boolean);
+ const labels=$('globeLabels'),legend=$('globeLegend');
+ labels.innerHTML='';legend.innerHTML='';
+ const n=registered.length;
+ registered.forEach((item,i)=>{
+   // Distribute labels across the visible face of the stationary globe.
+   const angle=i*2.3999632297, radius=n<5?0.20:Math.min(0.39,0.12+0.27*Math.sqrt((i+0.5)/n));
+   const x=50+Math.cos(angle)*radius*100, y=50+Math.sin(angle)*radius*78;
+   const tag=document.createElement('div');tag.className='globe-country-tag';tag.style.left=x+'%';tag.style.top=y+'%';tag.title=item.country+' — '+item.player.name;
+   tag.innerHTML='<span class="flag">'+esc(item.flag)+'</span> '+esc(item.country);
+   labels.appendChild(tag);
+   const badge=document.createElement('span');badge.className='tag';badge.textContent=item.flag+' '+item.country;badge.title='فرمانده: '+item.player.name;legend.appendChild(badge);
+ });
+}
+function renderChat(){const log=$('chatLog');if(!log)return;const messages=onlineChats.slice(-100);log.innerHTML=messages.map(m=>{const mine=authUser&&m.sender_id===authUser.id;let when='';try{when=new Date(m.created_at||Date.now()).toLocaleString('fa-IR',{hour:'2-digit',minute:'2-digit',month:'2-digit',day:'2-digit'})}catch{}return '<div class="chat-message '+(mine?'mine':'other')+'"><b>'+esc(m.sender_name||'بازیکن')+' · '+esc(m.sender_country||'')+'</b><span>'+esc(m.body||'')+'</span><small>'+esc(when)+'</small></div>'}).join('')||'<p class="muted">هنوز پیامی نیست؛ اولین پیام را بفرست!</p>';log.scrollTop=log.scrollHeight}
+
+function render(){if(!me)return;Object.assign(me,db.players[me.id]||{});$('sCountry').textContent=me.flag+' '+me.country;$('sMoney').textContent=fmt(me.money);$('sForce').textContent=Number(me.force||0).toLocaleString('en-US');$('sRepair').textContent=(me.repair||0)+'%';$('globeCountry').textContent=me.flag+' '+me.country;$('pName').textContent=me.name;$('pCountry').textContent=me.country;$('pStatus').textContent=me.conquered?'کشور فتح شده':'مستقل';$('econMoney').textContent=fmt(me.money);
+
+$('inventoryView').innerHTML=Object.keys(me.inventory||{}).length?Object.entries(me.inventory).map(([k,v])=>`<span class="itemchip">${esc(k)}: ${Number(v).toLocaleString('en-US')}</span>`).join(''):'<span class="muted">هنوز تجهیزاتی نداری.</span>';
+$('arsenalView').innerHTML=Object.keys(me.inventory||{}).length?Object.entries(me.inventory).map(([k,v])=>`<span class="itemchip">${esc(k)}: ${Number(v).toLocaleString('en-US')}</span>`).join(''):'<p class="muted">موجودی زرادخانه خالی است.</p>';
+let opts=Object.keys(db.owners).filter(c=>c!==me.country&&db.owners[c]&&db.players[db.owners[c]]).map(c=>`<option value="${esc(c)}">${esc(c)}</option>`).join('');$('diplomacyTarget').innerHTML=opts||'<option value="">کشور دیگری ثبت نشده</option>';
+renderChat();renderGlobe();renderShop()}
+function switchTab(tab){currentTab=tab;document.querySelectorAll('[data-tab]').forEach(b=>b.classList.toggle('primary',b.dataset.tab===tab));['world','economy','arsenal','diplomacy','chat','admin'].forEach(t=>$('tab-'+t).classList.toggle('hidden',t!==tab));if(tab==='arsenal')renderShop();if(tab==='admin'){adminOpen=false;$('adminLock').classList.remove('hidden');$('adminPanel').classList.add('hidden');$('adminPassword').value='';$('adminError').classList.add('hidden')}}
+function getAdminPlayers(){return Object.values(db.players||{})}
+function renderAdmin(){let players=getAdminPlayers();$('adminPlayers').innerHTML=players.length?players.map(p=>`<div class="player"><div><b>${esc(p.flag||'🏳️')} ${esc(p.name)}</b><small>${esc(p.country)} • ${fmt(p.money)} • ${p.conquered?'فتح شده':'مستقل'}</small></div><button data-pick="${esc(p.id)}">انتخاب</button></div>`).join(''):'<p class="muted">هنوز بازیکنی در این مرورگر ثبت نشده.</p>';document.querySelectorAll('[data-pick]').forEach(b=>b.onclick=()=>{selectedAdmin=b.dataset.pick;let p=db.players[selectedAdmin];$('grantTitle').textContent='اعطای امکانات به '+p.name;$('selectedPlayerInfo').textContent=p.name+' • '+p.country;$('grantMessage').classList.add('hidden')})}
+function adminLogin(){if($('adminPassword').value===ADMIN_PASSWORD){adminOpen=true;$('adminLock').classList.add('hidden');$('adminPanel').classList.remove('hidden');renderAdmin()}else{$('adminError').textContent='رمز اشتباه است.';$('adminError').classList.remove('hidden')}}
+function grant(){if(!selectedAdmin||!db.players[selectedAdmin]){msg('اول یک بازیکن را انتخاب کن.');return}let p=db.players[selectedAdmin],money=Math.max(0,Math.min(1e9,Number($('grantMoney').value)||0)),amount=Math.max(0,Math.min(1e9,Number($('grantAmount').value)||0)),item=$('grantItem').value;p.money=(Number(p.money)||0)+money;
+if(item==='نیروی کشور')p.force=(Number(p.force)||0)+amount;else if(item==='سطح تعمیرات')p.repair=Math.min(80,(Number(p.repair)||0)+amount);else p.inventory[item]=(Number(p.inventory[item])||0)+amount;
+db.players[selectedAdmin]=p;save();if(me&&me.id===selectedAdmin){me=p;render()}renderAdmin();$('grantMessage').textContent='امکانات با موفقیت به '+p.name+' اضافه شد.';$('grantMessage').classList.remove('hidden')}
+function msg(t){$('grantMessage').textContent=t;$('grantMessage').classList.remove('hidden')}
+$('registerBtn').onclick=register;document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>switchTab(b.dataset.tab));
+$('repairBtn').onclick=()=>{if(me.repair>=80){$('repairMessage').textContent='سطح تعمیرات به سقف ۸۰٪ رسیده است.';return}if(me.money<1){$('repairMessage').textContent='بودجه کافی نیست.';return}me.money-=1;me.repair=Math.min(80,me.repair+10);db.players[me.id]=me;save();render();$('repairMessage').textContent='۱۰٪ تعمیرات اضافه شد.'};
+document.querySelectorAll('[data-arsenal]').forEach(b=>b.onclick=()=>{shopCategory=b.dataset.arsenal;document.querySelectorAll('[data-arsenal]').forEach(x=>x.classList.toggle('primary',x===b));renderShop()});
+$('negotiateBtn').onclick=()=>{$('diplomacyMessage').textContent='درخواست مذاکره برای '+$('diplomacyTarget').value+' در نسخه محلی ثبت نمایشی نمی‌شود؛ آنلاین واقعی نیاز به سرور دارد.';$('diplomacyMessage').classList.remove('hidden')};
+$('attackBtn').onclick=()=>{let target=$('diplomacyTarget').value;if(!target)return;$('diplomacyMessage').textContent='حمله در نسخه آزمایشی شبیه‌سازی نشده و هیچ کشوری فتح نشد.';$('diplomacyMessage').classList.remove('hidden')};
+$('sendChatBtn').onclick=async()=>{const text=$('chatInput').value.trim();if(!text)return;if(!me||!authUser||!onlineReady){alert('اول وارد سرور آنلاین شو.');return}const btn=$('sendChatBtn');btn.disabled=true;try{const {error}=await supabase.from('ww_public_messages').insert({sender_id:authUser.id,sender_name:me.name,sender_country:me.country,body:text});if(error)throw error;$('chatInput').value='';await loadPublicChat()}catch(e){$('chatStatus').textContent='ارسال پیام ناموفق بود: '+e.message;alert('پیام ارسال نشد: '+e.message)}finally{btn.disabled=false}};$('chatInput').onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();$('sendChatBtn').click()}};
+$('adminLoginBtn').onclick=adminLogin;$('adminPassword').onkeydown=e=>{if(e.key==='Enter')adminLogin()};$('adminLogoutBtn').onclick=()=>switchTab('admin');$('grantBtn').onclick=grant;
+$('unlockCountryBtn').onclick=()=>{if(!selectedAdmin)return msg('اول بازیکن را انتخاب کن.');db.players[selectedAdmin].countryLocked=false;db.players[selectedAdmin].conquered=true;save();renderAdmin();if(me&&me.id===selectedAdmin){me=db.players[selectedAdmin];render()}msg('قفل تغییر کشور باز شد.')};
+$('markConqueredBtn').onclick=()=>{if(!selectedAdmin)return msg('اول بازیکن را انتخاب کن.');let p=db.players[selectedAdmin];p.conquered=true;p.countryLocked=false;save();if(me&&me.id===selectedAdmin){me=p;render()}renderAdmin();msg('وضعیت کشور به فتح‌شده تغییر کرد و قفل تغییر کشور باز شد.')};
+
+// اتصال واقعی به Supabase: حساب ناشناس پایدار در همین مرورگر، کشورها و چت روی سرور.
+window.addEventListener('storage',e=>{if(e.key!==STORE||!e.newValue)return;try{db=JSON.parse(e.newValue);if(me&&db.players&&db.players[me.id])me=db.players[me.id];if(me&&currentTab==='chat')renderChat();if(me)renderGlobe();if(me&&currentTab==='admin'&&adminOpen)renderAdmin();}catch{}});
+show('register');fillCountries();void initOnline();
+})();
+</script></body></html>
